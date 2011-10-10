@@ -1,9 +1,9 @@
 <?php
 /**
  * nmGear (biblioteca)
- *
+ * 
  * Uma base para as bibliotecas do framework nanoMax.
- *
+ * 
  * Uma classe abstrata que tem o objetivo de extender outras
  * bibliotecas desenvolvidas para o framework nanoMax disponibilizando
  * recursos fundamentais como: carregar arquivos de configuração,
