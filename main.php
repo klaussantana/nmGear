@@ -61,7 +61,7 @@
  * @version      0.1-dev
  * @filesource   
  **/
-abstract class nmGear
+class nmGear
 {
 	/**
 	 * Contém os contextos de configurações globais da biblioteca.
