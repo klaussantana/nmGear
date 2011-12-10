@@ -78,7 +78,7 @@ class nmGear
 	 * Contém os contextos de configurações da instância da biblioteca.
 	 *
 	 * @access   protected
-	 * @var      array       Clone e static::$Configuration, para personalizar as configurações por instância.
+	 * @var      array       Clone de static::$Configuration, para personalizar as configurações por instância.
 	 **/
 	protected
 	$InstanceConfiguration = array();
@@ -255,9 +255,9 @@ class nmGear
 		// Captura as configurações de um contexto se já não tiverem sido capturadas
 		if ( !isset($this->InstanceConfiguration[$context]) )
 		{
-			if ( static::Configuration($context) )
+			if ( static::Configuration($context) && static::Configuration($context) instanceof SimpleXMLElement )
 			{
-				$this->InstanceConfiguration[$context] = clone static::Configuration($context);
+				$this->InstanceConfiguration[$context] = new SimpleXMLElement(static::Configuration($context)->asXML());
 			}
 			
 			else
